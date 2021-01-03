@@ -33,5 +33,5 @@ export const getSize = node => {
 };
 
 export const getScroll = node => {
-    // TODO
+    return [node.scrollLeft, node.scrollTop];
 };

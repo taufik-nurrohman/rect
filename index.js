@@ -33,7 +33,7 @@ const getSize = node => {
 };
 
 const getScroll = node => {
-    // TODO
+    return [node.scrollLeft, node.scrollTop];
 };
 
 Object.assign(exports || {}, {
