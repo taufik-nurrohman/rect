@@ -15,7 +15,7 @@ console.log(getOffset(document.querySelector('#pane')));
 ### ECMAScript
 
 ~~~ js
-import {isString} from '@taufik-nurrohman/rect';
+import {getOffset} from '@taufik-nurrohman/rect';
 
 console.log(getOffset(document.querySelector('#pane')));
 ~~~
@@ -23,12 +23,12 @@ console.log(getOffset(document.querySelector('#pane')));
 Methods
 -------
 
-### getAxis(event: MouseEvent|TouchEvent, ?node: Element)
+### getAxis(event, node)
 
-### getOffset(node: Element)
+### getOffset(node)
 
-### getRect(node: Element|Window)
+### getRect(node)
 
-### getSize(node: Element|Window)
+### getSize(node)
 
-### getScroll(node: Element|Window)
+### getScroll(node)
