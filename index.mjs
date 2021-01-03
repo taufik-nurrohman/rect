@@ -1,4 +1,4 @@
-import {B, R, W, isWindow} from '@taufik-nurrohman/document';
+import {B, R, W, isWindow, setStyles} from '@taufik-nurrohman/document';
 
 export const getAxis = (event, node) => {
     let touches = event.touches,
@@ -34,4 +34,28 @@ export const getSize = node => {
 
 export const getScroll = node => {
     return [node.scrollLeft, node.scrollTop];
+};
+
+export const setAxis = (event, node) => {};
+
+export const setOffset = (node, data) => {
+    return setStyles(node, {
+        'left': data[0],
+        'top': data[1]
+    });
+};
+
+export const setRect = node => node;
+
+export const setSize = (node, data) => {
+    return setStyles(node, {
+        'width': data[0],
+        'height': data[1]
+    });
+};
+
+export const setScroll = (node, data) => {
+    node.scrollLeft = data[0];
+    node.scrollTop = data[1];
+    return node;
 };

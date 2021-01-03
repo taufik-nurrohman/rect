@@ -36,10 +36,39 @@ const getScroll = node => {
     return [node.scrollLeft, node.scrollTop];
 };
 
+const setAxis = (event, node) => {};
+
+const setOffset = (node, data) => {
+    return setStyles(node, {
+        'left': data[0],
+        'top': data[1]
+    });
+};
+
+const setRect = node => node;
+
+const setSize = (node, data) => {
+    return setStyles(node, {
+        'width': data[0],
+        'height': data[1]
+    });
+};
+
+const setScroll = (node, data) => {
+    node.scrollLeft = data[0];
+    node.scrollTop = data[1];
+    return node;
+};
+
 Object.assign(exports || {}, {
     getAxis,
     getOffset,
     getRect,
     getSize,
-    getScroll
+    getScroll,
+    setAxis,
+    setOffset,
+    setRect,
+    setSize,
+    setScroll
 });

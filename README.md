@@ -32,3 +32,9 @@ Methods
 ### getSize(node)
 
 ### getScroll(node)
+
+### setOffset(node, data)
+
+### setSize(node, data)
+
+### setScroll(node, data)
