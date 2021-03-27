@@ -16,16 +16,22 @@ export const getOffset = node => {
 };
 
 export const getRect = node => {
-    let x, y, rect;
+    let h, rect, w, x, y, X, Y;
     if (isWindow(node)) {
         x = node.pageXOffset || R.scrollLeft || B.scrollLeft;
         y = node.pageYOffset || R.scrollTop || B.scrollTop;
+        w = node.innerWidth;
+        h = node.innerHeight;
     } else {
         rect = node.getBoundingClientRect();
         x = rect.left;
         y = rect.top;
+        w = rect.width;
+        h = rect.height;
+        X = rect.right;
+        Y = rect.bottom;
     }
-    return [x, y];
+    return [x, y, w, h, X, Y];
 };
 
 export const getSize = node => {
