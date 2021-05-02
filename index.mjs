@@ -51,7 +51,7 @@ export const setOffset = (node, data) => {
     });
 };
 
-export const setRect = node => node;
+export const setRect = node => {};
 
 export const setSize = (node, data) => {
     return setStyles(node, {

@@ -51,7 +51,7 @@ const setOffset = (node, data) => {
     });
 };
 
-const setRect = node => node;
+const setRect = node => {};
 
 const setSize = (node, data) => {
     return setStyles(node, {
@@ -66,7 +66,7 @@ const setScroll = (node, data) => {
     return node;
 };
 
-Object.assign(exports || {}, {
+Object.assign(exports, {
     getAxis,
     getOffset,
     getRect,
